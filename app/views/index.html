@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+
+<h2 *ngIf="toDoList">{{ titleDo }}</h2>
+<section *ngFor="let todo of toDoList" >
+  <p>
+    <input type="checkbox" name="toDoList" id="{{ todo.id }}" disabled [(ngModel)]="todo.state">
+    <label>{{ todo.task }}</label>
+  </p>
+</section>
