@@ -5,5 +5,6 @@
   <p>
     <input type="checkbox" name="toDoList" id="{{ todo.id }}" disabled [(ngModel)]="todo.state">
     <label>{{ todo.task }}</label>
+    <button (click)="toList(todo)">Effectuée</button>
   </p>
 </section>

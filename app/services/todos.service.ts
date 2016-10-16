@@ -11,7 +11,7 @@ import { TODOS } from '../datas/todolist.data';
 // Export du service
 export class TodoService {
 
-  // Retourn la liste des tâches à faires
+  // Retourne la liste des tâches à faires
   getToDo(): toDoItem[]{
     var toDoList: toDoItem[];
     toDoList = [];
@@ -27,6 +27,7 @@ export class TodoService {
     return toDoList;
   }
 
+  // Retourne la liste des tâches effectués
   getNotToDo(): toDoItem[]{
     var notToDoList: toDoItem[];
     notToDoList = [];
