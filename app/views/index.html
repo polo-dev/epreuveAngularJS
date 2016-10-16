@@ -1,5 +1,6 @@
 <h1>{{ title }}</h1>
 
+<!-- Liste des todo -->
 <h2 *ngIf="toDoList">{{ titleDo }}</h2>
 <section *ngFor="let todo of toDoList" >
   <p>
@@ -7,4 +8,10 @@
     <label>{{ todo.task }}</label>
     <button (click)="toList(todo)">Effectuée</button>
   </p>
+</section>
+
+<!-- ajoute les taches -->
+<section>
+  <input [(ngModel)]="newToDo.task" type="text">
+  <button (click)="addToDo()">Ajouter</button>
 </section>
