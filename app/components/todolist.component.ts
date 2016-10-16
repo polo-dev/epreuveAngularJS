@@ -14,8 +14,16 @@ export class ToDoListComponent {
 
   @Input() todo: toDoItem;
   @Output() sendToDoDetail = new EventEmitter();
+  @Output() deleteToDoDetail = new EventEmitter();
 
+  // change le statut d'un todo
   toList(event: Event){
     this.sendToDoDetail.emit(this.todo);
   }
+
+  // delete un todo
+  deleteToDo(event: Event) {
+    this.deleteToDoDetail.emit(this.todo);
+  }
+
 }

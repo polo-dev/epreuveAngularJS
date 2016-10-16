@@ -16,29 +16,25 @@ export class ArchiveDirective {
   title         = 'Liste des taches';
   titleNotDo    = 'Taches réalisé';
   notToDoList: toDoItem[];
-  newToDo: toDoItem;
 
+  // Change le statut d'une tache
   toList (toDo:toDoItem)
   {
     toDo.state = !toDo.state;
     this.notToDoList = this.todoService.getNotToDo();
   }
 
-  resetInput(){
-    this.newToDo = {id: 0, task: '', state: false};
-    this.notToDoList = this.todoService.getNotToDo();
+  //delete une tache
+  deleteToDo(todo:toDoItem)
+  {
+    this.notToDoList = this.todoService.deleteToDo(todo);
   }
 
-  addToDo() {
-    this.todoService.addToDo(this.newToDo);
-    this.resetInput();
-  }
 
   constructor(
     private todoService: TodoService
   )
   {
     this.notToDoList = this.todoService.getNotToDo();
-    this.resetInput();
   }
 }

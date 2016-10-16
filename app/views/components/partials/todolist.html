@@ -7,6 +7,9 @@
     <span *ngIf="todo.state">Refaire</span>
     <span *ngIf="!todo.state">Effectuée</span>
   </button>
+  <button *ngIf="todo.state" (click)="deleteToDo(todo.id)">
+    supprimer
+  </button>
 </p>
 
 

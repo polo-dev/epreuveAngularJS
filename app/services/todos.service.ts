@@ -17,6 +17,20 @@ export class TodoService {
     console.log(TODOS);
   }
 
+  // Supprime une tache de la liste des todo
+  deleteToDo(todo:toDoItem)
+  {
+    for(var i = 0; i < TODOS.length; i++) {
+      var obj = TODOS[i];
+
+      if(obj.id === todo.id) {
+        TODOS.splice(i, 1);
+      }
+    }
+
+    return this.getNotToDo();
+  }
+
   // Retourne la liste des tâches à faires
   getToDo(): toDoItem[]{
     var toDoList: toDoItem[];

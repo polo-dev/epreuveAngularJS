@@ -30,10 +30,22 @@ Step 4:
 
 Ajout d'une navigation / de route + Ajout de la liste des todo effectués
 
-(user story 4 et 5)
+(user story 4, 5 et 6)
 
 - ajout app routing dans app module
 - Modifications views ajout : archive.html, todo.html 
 - Ajout dossier partials : views todolist (affiche la liste des todo, s'adapte en fonction des todo effectués et a faire)
 - Ajout des directives Archives et Todo
 - Ajout du components todolist (qui gère la view todolist.html)
+
+step 5
+
+Ajout bouton suppression 
+
+(user story 7)
+
+- Modification todolist.component / archive.directive / todolist.html / todoservice (delete fonction) / archive.html
+
+step 6
+
+Plus le temps pour user story 8 et 9
