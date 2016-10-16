@@ -1,0 +1,10 @@
+<h2 *ngIf="toDoList">{{ titleDo }}</h2>
+<section *ngFor="let todo of toDoList" >
+  <todo-item [todo]="todo" (sendToDoDetail)="toList($event)"></todo-item>
+</section>
+
+<!-- ajoute les taches -->
+<section>
+  <input [(ngModel)]="newToDo.task" type="text">
+  <button (click)="addToDo()">Ajouter</button>
+</section>

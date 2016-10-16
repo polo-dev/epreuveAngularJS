@@ -1,5 +1,5 @@
 /**
- * Created by polo on 15/10/2016.
+ * Created by polo on 16/10/2016.
  */
 // Import du model de donnée utilisé dans la collection
 import {toDoItem} from "../models/todolist.item";

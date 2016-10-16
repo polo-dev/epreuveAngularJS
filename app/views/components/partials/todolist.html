@@ -1,0 +1,13 @@
+<!-- liste des todo effectués et non effectués-->
+<p>
+  <input type="checkbox" name="toDoList" id="{{ todo.id }}" [(ngModel)]="todo.state" disabled>
+  <label *ngIf="todo.state"><s>{{ todo.task }}</s></label>
+  <label *ngIf="!todo.state">{{ todo.task }}</label>
+  <button (click)="toList(todo)">
+    <span *ngIf="todo.state">Refaire</span>
+    <span *ngIf="!todo.state">Effectuée</span>
+  </button>
+</p>
+
+
+

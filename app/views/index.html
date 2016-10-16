@@ -1,17 +1,13 @@
 <h1>{{ title }}</h1>
 
-<!-- Liste des todo -->
-<h2 *ngIf="toDoList">{{ titleDo }}</h2>
-<section *ngFor="let todo of toDoList" >
-  <p>
-    <input type="checkbox" name="toDoList" id="{{ todo.id }}" disabled [(ngModel)]="todo.state">
-    <label>{{ todo.task }}</label>
-    <button (click)="toList(todo)">Effectuée</button>
-  </p>
-</section>
+<!-- Navigation -->
+<header>
+  <nav>
+    <a routerLink="/todo">Tache à faire</a>
+    <a routerLink="/archive">Tache réalisé</a>
+  </nav>
+</header>
 
-<!-- ajoute les taches -->
-<section>
-  <input [(ngModel)]="newToDo.task" type="text">
-  <button (click)="addToDo()">Ajouter</button>
-</section>
+<!-- Ajouter la directive router-outlet pour afficher les vues des routes --->
+<router-outlet></router-outlet>
+

@@ -1,4 +1,4 @@
-/** Created by polo on 15/10/2016. */
+/** Created by polo on 16/10/2016. */
 //Model de l'objet todolist
 export class toDoItem {
   public id: number;

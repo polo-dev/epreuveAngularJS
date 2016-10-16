@@ -1,0 +1,5 @@
+<!-- Affiche la liste des todo effectués-->
+<h2 *ngIf="notToDoList">{{ titleNotDo }}</h2>
+<section *ngFor="let todo of notToDoList" >
+  <todo-item [todo]="todo" (sendToDoDetail)="toList($event)"></todo-item>
+</section>
